@@ -1,0 +1,407 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('bg1.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+}
+
+.header-container {
+    background: linear-gradient(to right, #0A2342, #153E90);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.auth-buttons, .user-welcome {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.button, .profile-button {
+    padding: 10px 20px;
+    background: linear-gradient(to right, #2155CD, #193E6D);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.profile-button {
+    margin-top: 10px;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.main-nav {
+    background-color: #607D8B;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+.slogan {
+    text-align: center;
+    font-size: 27px;
+    font-weight: bold;
+    color: rgb(5, 7, 121);
+    padding: 20px 0;
+    background-color: rgba(255, 255, 255,0.9);
+    margin: 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(0, 41, 112)
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.category {
+    background-color: lightgrey;
+    border: 2px solid rgb(0, 0, 255);
+    border-radius: 20px;
+    padding: 15px 30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    min-width: 120px;
+    background-color: rgba(255, 255, 255, 0.81);
+    color: rgb(4, 0, 0);
+}
+
+@media (max-width: 600px) {
+    .category {
+        flex: 0 0 100%;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f4f4f4;
+    margin-top: auto;
+}
+
+footer a {
+    color: #0A2342;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.info-content {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+.info-content h2 {
+    color: #2155CD;
+    margin-top: 20px;
+}
+
+.registration-invite {
+    text-align: center;
+    padding: 20px;
+}
+
+.register-button {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: 2px solid rgb(2, 63, 11);
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.login-page body {
+    background: url('https://life.futuregenerali.in/media/cu0k2uxn/insurance-policy.jpg') center/cover no-repeat;
+    color: #333;
+    text-align: center;
+    background-attachment: fixed;
+}
+
+.login-page main {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: auto;
+}
+
+.login-page form {
+    margin-top: 20px;
+    display: grid;
+    gap: 10px;
+}
+
+.login-page input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+}
+
+.login-page input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.login-page input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.login-page a {
+    display: block;
+    margin-top: 10px;
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.login-page a:hover {
+    text-decoration: underline;
+}
+
+.signup-page body {
+    background: url('https://cdn.vectorstock.com/i/1000x1000/86/05/insurance-service-cartoon-vector-33558605.webp') center/cover no-repeat;
+    color: #333;
+    text-align: center;
+    background-attachment: fixed;
+}
+
+.signup-page main {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: auto;
+}
+
+.signup-page form {
+    margin-top: 20px;
+}
+
+.signup-page input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+}
+
+.signup-page input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.signup-page input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.about-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.support-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 700px;
+    box-shadow: 0px
+
+ 0px 15px rgba(0, 0, 0, 0.2);
+    font-family: 'Arial', sans-serif;
+}
+
+.support-content h2 {
+    color: #153E90;
+    margin-bottom: 20px;
+}
+
+.support-content p, .support-content a {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.support-content a {
+    color: #0A2342;
+    text-decoration: none;
+}
+
+.support-content a:hover {
+    text-decoration: underline;
+}
+
+form {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+textarea {
+    width: calc(100% - 30px);
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #2155CD;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #153E90;
+}
+
+.info-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 900px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #2155CD;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.info-container h2 {
+    background: linear-gradient(to right, #153E90, #2155CD);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.info-container p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.info-container a {
+    color: #153E90;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.info-container a:hover {
+    color: #2155CD;
+    text-decoration: underline;
+}
+
+.profile-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.signup-page.body-signup {
+    background: url('bg2.webp') center/cover no-repeat;
+    background-attachment: fixed;
+}
+
+.page.login-page {
+    background: url('bg3.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+}
+
+.policy-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.policy-list li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.policy-list a {
+    display: inline-block;
+    padding: 15px 30px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.policy-list a[href*="car"] { background-color: #e74c3c; }
+.policy-list a[href*="bike"] { background-color: #3498db; }
+.policy-list a[href*="travel"] { background-color: #f1c40f; }
+.policy-list a[href*="health"] { background-color: #2ecc71; }
+.policy-list a[href*="business"] { background-color: #9b59b6; }
+.policy-list a[href*="home"] { background-color: #34495e; }
+
+.policy-list a:hover {
+    opacity: 0.9;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}

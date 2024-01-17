@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Business Insurance Form{% endblock %}
+
+{% block content %}
+    <h2>Business Insurance Form</h2>
+    <form action="/submit_policy" method="post">
+        <input type="hidden" name="policy_type" value="business">
+        <label for="business_name">Business Name:</label>
+        <input type="text" id="business_name" name="business_name" required><br>
+
+        <label for="industry_type">Industry Type:</label>
+        <input type="text" id="industry_type" name="industry_type" required><br>
+
+        <label for="business_address">Business Address:</label>
+        <input type="text" id="business_address" name="business_address" required><br>
+
+        <label for="number_of_employees">Number of Employees:</label>
+        <input type="number" id="number_of_employees" name="number_of_employees" required><br>
+
+        <label for="annual_revenue">Annual Revenue ($):</label>
+        <input type="number" id="annual_revenue" name="annual_revenue" required><br>
+        <label for="insurance_amount">Insurance Amount ($):</label>
+        <input type="number" id="insurance_amount" name="insurance_amount" required><br>
+
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}

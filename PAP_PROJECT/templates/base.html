@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}My Website{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="header-container">
+        <h1>INSURANCE WORKFLOW MANAGEMENT</h1>
+        {% if user_info.name %}
+            <div class="user-welcome">
+                <div class="welcome-message">
+                    Welcome, {{ user_info.name }}
+                </div>
+                <a href="/profile_page" class="profile-button">My Profile</a>
+                
+                <a href="/logout" class="button">Logout</a>
+            </div>
+        {% else %}
+            <div class="auth-buttons">
+                <a href="/login" class="button">Login</a>
+                <a href="/signup" class="button">Sign Up</a>
+            </div>
+        {% endif %}
+    </div>
+    <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/support">Support</a>
+        <a href="/info">Info Centre</a>
+        <a href="/policies">My Policies Management</a>
+    </nav>
+    <main>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <a href="/">Home</a>
+        <a href="/support">Contact</a>
+    </footer>
+</body>
+</html>

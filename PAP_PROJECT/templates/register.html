@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Register for Insurance{% endblock %}
+
+{% block content %}
+    <h2>Choose the Policy of your choice to register</h2>
+    <form action="/submit_policy" method="post">
+        <select name="policy_type" id="policyType">
+            <option value="car">Car Insurance</option>
+            <option value="bike">Bike Insurance</option>
+            <option value="travel">Travel Insurance</option>
+            <option value="health">Health Insurance</option>
+            <option value="business">Business Insurance</option>
+            <option value="renewal">Policy Renewal</option>
+        </select>
+        <input type="submit" value="Choose Policy">
+    </form>
+
+ 

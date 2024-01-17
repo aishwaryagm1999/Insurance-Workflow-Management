@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Health Insurance Form{% endblock %}
+
+{% block content %}
+    <h2>Health Insurance Form</h2>
+    <form action="/submit_policy" method="post">
+        <input type="hidden" name="policy_type" value="health">
+        <label for="applicant_name">Applicant's Name:</label>
+        <input type="text" id="applicant_name" name="applicant_name" required><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br>
+
+        <label for="medical_conditions">Pre-existing Medical Conditions:</label>
+        <textarea id="medical_conditions" name="medical_conditions"></textarea><br>
+
+        <label for="coverage_amount">Coverage Amount ($):</label>
+        <input type="number" id="coverage_amount" name="coverage_amount" required><br>
+        <label for="insurance_amount">Insurance Amount ($):</label>
+        <input type="number" id="insurance_amount" name="insurance_amount" required><br>
+
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}

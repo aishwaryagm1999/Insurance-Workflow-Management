@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Travel Insurance Form{% endblock %}
+
+{% block content %}
+    <h2>Travel Insurance Form</h2>
+    <form action="/submit_policy" method="post">
+        <input type="hidden" name="policy_type" value="travel">
+        <label for="destination">Destination:</label>
+        <input type="text" id="destination" name="destination" required><br>
+
+        <label for="travel_date">Travel Date:</label>
+        <input type="date" id="travel_date" name="travel_date" required><br>
+
+        <label for="return_date">Return Date:</label>
+        <input type="date" id="return_date" name="return_date" required><br>
+
+        <label for="travel_reason">Reason for Travel:</label>
+        <input type="text" id="travel_reason" name="travel_reason"><br>
+
+        <label for="coverage_amount">Coverage Amount ($):</label>
+        <input type="number" id="coverage_amount" name="coverage_amount" required><br>
+        <label for="insurance_amount">Insurance Amount ($):</label>
+        <input type="number" id="insurance_amount" name="insurance_amount" required><br>
+
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}My Profile{% endblock %}
+
+{% block content %}
+<div class="profile-container">
+    <h1>User Profile</h1>
+    <p><strong>Full Name:</strong> {{ user.name }}</p>
+    <p><strong>Username:</strong> {{ user.username }}</p>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <p><strong>Phone:</strong> {{ user.phone }}</p>
+    
+    <h2>Profile Photo</h2>
+    {% if user.profile_photo %}
+    <img src="{{ url_for('static', filename='profilepics/' + user.profile_photo) }}" alt="Profile Photo" class="profile-photo">
+
+
+
+
+
+    {% else %}
+    <p>No profile photo set.</p>
+    {% endif %}
+    
+    <form action="/upload_photo" method="post" enctype="multipart/form-data">
+        <input type="file" name="photo" required>
+        <input type="submit" value="Upload Photo">
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %}My Policies{% endblock %}
+
+{% block content %}
+    <h2>My Insurance Policies</h2>
+    {% if user_policies %}
+        <div class="policy-list">
+            {% for policy in user_policies %}
+                <div class="policy">
+                    <h3>{{ policy.policy_type | capitalize }} Insurance Policy</h3>
+                    <p><strong>Expiry Date:</strong> {{ policy.expiry_date }}</p>
+                    <form method="POST" action="/update_expiry">
+                      
+                        <input type="hidden" name="policy_id" value="{{ policy.policy_id }}"> 
+                        <input type="date" name="new_expiry_date">
+                        <input type="submit" value="Renew Policy">
+                    </form>
+  
+                    {% if policy.renewed %}
+                        <p style="color: green;">Policy renewed!</p> 
+                    {% endif %}
+                    <p><strong>Remaining Amount:</strong> {{ policy.insurance_amount }}</p>
+
+                    <!-- Display all policy details -->
+                    {% for key, value in policy.items() %}
+                        {% if key not in ['user_id', 'policy_type', 'initial_amount', 'insurance_amount', 'id', 'claims', 'qr_code_path'] %}
+                            <p><strong>{{ key | capitalize | replace("_", " ") }}:</strong> {{ value }}</p>
+                        {% endif %}
+                    {% endfor %}
+
+                    <!-- Display QR Code Image -->
+                    {% if policy.qr_code_path %}
+                        <img src="{{ url_for('static', filename=policy.qr_code_path) }}" alt="QR Code" style="width:150px; height:150px;">
+                    {% endif %}
+
+                    <!-- Display Claims -->
+                    {% if policy.claims %}
+                        <p><strong>Claims Made:</strong></p>
+                        <ul>
+                            {% for claim in policy.claims %}
+                                <li>${{ claim }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+
+                    <!-- Claim Form -->
+                    <form action="/submit_claim" method="post">
+                        <input type="hidden" name="policy_type" value="{{ policy.policy_type }}">
+                        <label for="claim_amount_{{ policy.policy_type }}">Claim Amount:</label>
+                        <input type="number" id="claim_amount_{{ policy.policy_type }}" name="claim_amount" min="0" max="{{ policy.insurance_amount }}" required>
+                        <input type="submit" value="Claim">
+                    </form>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>No policies registered yet.</p>
+    {% endif %}
+{% endblock %}

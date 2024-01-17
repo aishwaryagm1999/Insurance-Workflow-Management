@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Bike Insurance Form{% endblock %}
+
+{% block content %}
+    <h2>Bike Insurance Form</h2>
+    <form action="/submit_policy" method="post">
+        <input type="hidden" name="policy_type" value="bike">
+        <label for="bike_model">Bike Model:</label>
+        <input type="text" id="bike_model" name="bike_model" required><br>
+
+        <label for="bike_year">Bike Year:</label>
+        <input type="number" id="bike_year" name="bike_year" required><br>
+
+        <label for="registration_number">Registration Number:</label>
+        <input type="text" id="registration_number" name="registration_number" required><br>
+
+        <label for="owner_name">Owner's Name:</label>
+        <input type="text" id="owner_name" name="owner_name" required><br>
+
+        <label for="insurance_amount">Insurance Amount ($):</label>
+        <input type="number" id="insurance_amount" name="insurance_amount" required><br>
+
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}

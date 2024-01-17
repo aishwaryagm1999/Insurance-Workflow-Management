@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% block title %}Car Insurance Form{% endblock %}
+
+{% block content %}
+<h2>Car Insurance Form</h2>
+<form action="/submit_policy" method="post">
+    <input type="hidden" name="policy_type" value="car">
+
+    
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required><br>
+
+    <label for="policy_state">Policy State:</label>
+    <input type="text" id="policy_state" name="policy_state" required><br>
+
+    <label for="policy_csl">Policy CSL:</label>
+    <input type="text" id="policy_csl" name="policy_csl" required><br>
+
+    <label for="policy_deductable">Policy Deductible:</label>
+    <input type="number" id="policy_deductable" name="policy_deductable" required><br>
+
+    <label for="policy_annual_premium">Policy Annual Premium:</label>
+    <input type="number" id="policy_annual_premium" name="policy_annual_premium" required><br>
+
+    <label for="insured_sex">Insured Sex:</label>
+    <select id="insured_sex" name="insured_sex" required>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+    </select><br>
+
+    <label for="insured_education_level">Insured Education Level:</label>
+    <input type="text" id="insured_education_level" name="insured_education_level" required><br>
+
+    <label for="insured_occupation">Insured Occupation:</label>
+    <input type="text" id="insured_occupation" name="insured_occupation" required><br>
+
+    <label for="insured_hobbies">Insured Hobbies:</label>
+    <input type="text" id="insured_hobbies" name="insured_hobbies" required><br>
+
+    <label for="insured_relationship">Insured Relationship:</label>
+    <input type="text" id="insured_relationship" name="insured_relationship" required><br>
+
+    <label for="incident_type">Incident Type:</label>
+    <input type="text" id="incident_type" name="incident_type" required><br>
+
+    <label for="collision_type">Collision Type:</label>
+    <input type="text" id="collision_type" name="collision_type" required><br>
+
+    <label for="incident_severity">Incident Severity:</label>
+    <input type="text" id="incident_severity" name="incident_severity" required><br>
+
+    <label for="authorities_contacted">Authorities Contacted:</label>
+    <input type="text" id="authorities_contacted" name="authorities_contacted" required><br>
+
+    <label for="incident_state">Incident State:</label>
+    <input type="text" id="incident_state" name="incident_state" required><br>
+
+    <label for="incident_city">Incident City:</label>
+    <input type="text" id="incident_city" name="incident_city" required><br>
+
+    <label for="number_of_vehicles_involved">Number of Vehicles Involved:</label>
+    <input type="number" id="number_of_vehicles_involved" name="number_of_vehicles_involved" required><br>
+
+    <label for="property_damage">Property Damage:</label>
+    <input type="text" id="property_damage" name="property_damage" required><br>
+
+    <label for="bodily_injuries">Bodily Injuries:</label>
+    <input type="number" id="bodily_injuries" name="bodily_injuries" required><br>
+
+    <label for="witnesses">Witnesses:</label>
+    <input type="number" id="witnesses" name="witnesses" required><br>
+
+    <label for="police_report_available">Police Report Available:</label>
+    <input type="text" id="police_report_available" name="police_report_available" required><br>
+
+    <label for="total_claim_amount">Total Claim Amount:</label>
+    <input type="number" id="total_claim_amount" name="total_claim_amount" required><br>
+
+    <label for="injury_claim">Injury Claim:</label>
+    <input type="number" id="injury_claim" name="injury_claim" required><br>
+
+    <label for="property_claim">Property Claim:</label>
+    <input type="number" id="property_claim" name="property_claim" required><br>
+
+    <label for="vehicle_claim">Vehicle Claim:</label>
+    <input type="number" id="vehicle_claim" name="vehicle_claim" required><br>
+
+    <label for="auto_make">Auto Make:</label>
+    <input type="text" id="auto_make" name="auto_make" required><br>
+
+    <label for="auto_model">Auto Model:</label>
+    <input type="text" id="auto_model" name="auto_model" required><br>
+
+    <label for="auto_year">Auto Year:</label>
+    <input type="number" id="auto_year" name="auto_year" required><br>
+
+    <label for="registration_number">Registration Number:</label>
+    <input type="text" id="registration_number" name="registration_number" required><br>
+    <label for="insurance_amount">Insurance Amount:</label>
+    <input type="text" id="insurance_amount" name="insurance_amount" required><br>
+
+    
+    <input type="submit" value="Submit">
+</form>
+
+{% endblock %}
